@@ -103,8 +103,7 @@ Now, store the file on the created directory.
 * hdfs dfs -put hive/emp_details /HiveDirectory  
 * Let's create an external table using the following command: -
 ```sql
-hive> create external table emplist (Id int, Name string , Salary float)  
-row format delimited  
- fields terminated by ','   
-location '/HiveDirectory';  
+
+hive> CREATE TABLE netflix_movies (show_id STRING,type STRING,title STRING,director STRING,cast STRING,country STRING,date_added STRING,release_year STRING,rating STRING,duration STRING,listed_in STRING,description STRING) ROW FORMAT DELIMITED FIELDS TERMINATED BY ‘\t’ LINES TERMINATED BY ‘\n’ STORED AS TEXTFILE;
+
 ```
